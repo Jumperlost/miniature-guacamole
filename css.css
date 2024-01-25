@@ -18,49 +18,32 @@ body {
 .header {
   position: relative;
   display: flex;
-  margin: 0 auto;
-  width: 80%;
-  padding: 40px 30px 90px;
+  padding: 40px 90px;
   justify-content: center;
 }
-
-.logo-square {
-  background: #b0e0fb;
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  rotate: 45deg;
-  width: 100px;
-  margin-top: 10px;
-}
-.logo {
-  z-index: 1;
-  position: absolute;
-  top: 65px;
-  left: 60px;
-  background: #b0e0fb;
-}
-
-.logo-square::before {
-  content: "";
-  padding-bottom: 100%;
-  display: block;
+.logo-name {
+  margin: 0 200px 0 100px;
 }
 
 .logo-name-mod {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  max-width: 20%;
-  margin-top: 10px;
-  border: 1px solid black;
-  width: 100px;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
   background: #b0e0fb;
+  position: relative;
+  transform: rotate(225deg);
+  text-align: center;
+  line-height: 80px;
 }
 .logo-name-mod::before {
-  content: "";
-  padding-bottom: 100%;
-  display: block;
+  content: "Logo";
+  height: 80px;
+  width: 80px;
+  background: #b0e0fb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(135deg);
 }
 
 h1 {
@@ -116,20 +99,173 @@ li:not(.active) {
 }
 
 #animate-square {
-  position: relative;
-  bottom: -114px;
-  left: 82.5%;
-  background-color: #b0e0fb;
+  position: absolute;
+  bottom: -35px;
+  right: 45px;
+  padding: 25px;
+  z-index: 1;
   width: 50px;
   height: 50px;
-  z-index: 1;
-  -webkit-box-shadow: 0px 0px 0px 10px #a0a0a0, inset 0px 10px 27px -8px #141414,
-    inset 0px -10px 27px -8px #b0e0fb, 5px -20px 15px -6px rgba(0, 0, 0, 0);
-  box-shadow: 0px 0px 0px 8px #b0e0fb, inset 0px 10px 27px -8px #141414,
-    inset 0px -10px 27px -8px #b0e0fb, 5px -20px 15px -6px rgba(0, 0, 0, 0);
+  background-color: #b0e0fb;
+  border-top: 10px solid pink;
+  border-right: 10px solid lightsalmon;
+  border-bottom: 10px solid lightgreen;
+  border-left: 10px solid lightblue;
 }
 
 .rotate360 {
   transition: transform 1.5s;
   transform: rotate(360deg);
+}
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 15px;
+  }
+  li {
+    width: 50%;
+    position: relative;
+    float: none;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: #b0e0fb;
+  }
+  .tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 0;
+  }
+  #animate-square {
+    display: none;
+  }
+  h1 {
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .header {
+    padding: 5px;
+  }
+
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  .logo-name-mod {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #b0e0fb;
+    position: relative;
+    transform: rotate(225deg);
+    text-align: center;
+    line-height: 40px;
+  }
+  .logo-name-mod::before {
+    content: "Logo";
+    height: 40px;
+    width: 40px;
+    background: #b0e0fb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(135deg);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-size: 15px;
+  }
+  li {
+    width: 50%;
+    position: relative;
+    float: none;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: #b0e0fb;
+  }
+  .tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 0;
+  }
+  h1 {
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .header {
+    padding: 5px;
+  }
+  .logo-name-mod {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #b0e0fb;
+    position: relative;
+    transform: rotate(225deg);
+    text-align: center;
+    line-height: 40px;
+  }
+  .logo-name-mod::before {
+    content: "Logo";
+    height: 40px;
+    width: 40px;
+    background: #b0e0fb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(135deg);
+  }
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  #animate-square {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-size: 15px;
+  }
+  .header {
+    padding: 10px 30px;
+  }
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  #animate-square {
+    bottom: -35px;
+    right: 10px;
+  }
+  .tabs-list {
+    padding-bottom: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .header {
+    padding: 10px 30px;
+  }
+  .logo-name {
+    margin: 0 0 0 40px;
+  }
+  #animate-square {
+    bottom: -35px;
+    right: 25px;
+  }
+  .tabs-list {
+    padding-bottom: 70%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+  .tabs-list {
+    padding-bottom: 40%;
+  }
 }
